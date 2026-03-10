@@ -55,9 +55,10 @@ int main() {
 
     acc2.displayAccount();
     acc2.deposit(4000);
-    acc2.withdrwa(3000);
+    acc2.withdraw(3000);
     cout << endl;
 
     return 0;
 
 }
+
