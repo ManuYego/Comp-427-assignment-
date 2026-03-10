@@ -8,21 +8,20 @@ private:
     double balance;
 
 public:
-    // Constructor
     BankAccount(int accNo, string holder, double bal) {
         accountNumber = accNo;
         accountHolder = holder;
         balance = bal;
     }
 
-    // Deposit function
+
     void deposit(double amount) {
         balance += amount;
         cout << "Deposit: " << amount << endl;
         cout << "New Balance: " << balance << endl;
     }
 
-    // Withdraw function
+
     void withdraw(double amount) {
         if (amount > balance) {
             cout << "Withdrawal failed: Insufficient funds" << endl;
@@ -33,7 +32,7 @@ public:
         }
     }
 
-    // Display account details
+    
     void displayAccount() {
         cout << "Account Number: " << accountNumber << endl;
         cout << "Account Holder: " << accountHolder << endl;
@@ -43,23 +42,22 @@ public:
 
 int main() {
 
-    // Creating two bank accounts
+
     BankAccount acc1(101, "John", 5000);
     BankAccount acc2(102, "Mary", 3000);
 
     // Display first account
     acc1.displayAccount();
-
-    // Perform deposit
     acc1.deposit(1000);
-
-    // Perform withdrawal
     acc1.withdraw(2000);
 
     cout << endl;
 
-    // Display second account
     acc2.displayAccount();
+    acc2.deposit(4000);
+    acc2.withdrwa(3000);
+    cout << endl;
 
     return 0;
+
 }
